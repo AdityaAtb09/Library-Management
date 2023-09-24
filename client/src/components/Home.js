@@ -169,7 +169,7 @@ export const Home = () => {
               <h1 className="homeh1">
                 <Typewriter
                   options={{
-                    strings: ["Welcome Back "],
+                    strings: ["Welcome","Back"],
                     autoStart: true,
                     loop: true,
                   }}
@@ -209,7 +209,7 @@ export const Home = () => {
               <h1 className="homeh1">
                 <Typewriter
                   options={{
-                    strings: ["Hello Friends "],
+                    strings: ["Hello", "Friends"],
                     autoStart: true,
                     loop: true,
                   }}
