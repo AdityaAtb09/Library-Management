@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "../api/axios";
@@ -37,8 +37,8 @@ export const Home = () => {
 
       //setting token and role initially after login
       sessionStorage.setItem("token", res.data.token);
-      sessionStorage.setItem("role", res.data.user.role);
-      setRole(res.data.user.role);
+      sessionStorage.setItem("role", "user");
+      setRole("user");
       setToken(res.data.token);
 
       setLoginEmail("");
@@ -57,10 +57,11 @@ export const Home = () => {
     try {
       const response = await axios.post(
         "/signup",
-        JSON.stringify({ name, signUpEmail, signUpPassword }),
+        JSON.stringify({ name, signUpEmail, signUpPassword, role:'user' }),
         {
           baseURL: "http://localhost:8080/auth",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json",
+        "Access-Control-Allow-Origin":"*" },
           withCredentials: false,
         }
       );
