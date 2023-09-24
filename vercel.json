@@ -1,11 +1,10 @@
 {
     "version": 2,
     "name": "library-management",
-    "builds": [
-      { "src": "script.js", "use": "@vercel/node" }
-    ],
+    
     "routes": [
-      { "src": "/(.*)", "dest": "server.js" }
+      { "src": "/(.*)", "dest": "/Routes/authRoutes.js" },
+      { "src": "/(.*)", "dest": "/Routes/userRoutes.js" }
     ]
   }
   
