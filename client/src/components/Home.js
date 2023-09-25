@@ -29,7 +29,7 @@ export const Home = () => {
         "/login",
         JSON.stringify({ loginEmail, loginPassword }),
         {
-          baseURL: "http://localhost:8080/auth",
+          baseURL: "https://backend-orvm.onrender.com/auth",
           headers: { "Content-Type": "application/json" },
           withCredentials: false,
         }
@@ -59,7 +59,7 @@ export const Home = () => {
         "/signup",
         JSON.stringify({ name, signUpEmail, signUpPassword, role:'user' }),
         {
-          baseURL: "http://localhost:8080/auth",
+          baseURL: "https://backend-orvm.onrender.com/auth",
           headers: { "Content-Type": "application/json",
         "Access-Control-Allow-Origin":"*" },
           withCredentials: false,
